@@ -5,7 +5,7 @@
     },
     "posthtml-expressions": {
       "root": "./src/partials",
-      "locals": {"headline":"My Headline","byline":"By Jason Kao","body":[{"type":"text","value":"Lead"},{"type":"image","value":{"asset":"https://static.politico.com/dims4/default/3ec0f57/2147483647/resize/1160x>/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fbc%2Ff1%2F19ee7fef4114951ffca351b7e3f4%2F190701-hickenlooper-gty-773.jpg"}},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"graphic-name-2"},{"type":"graphic","value":"graphic-name"},{"type":"text","value":"Refer"}]}
+      "locals": {"headline":"My Headline","byline":"By Jason Kao","body":[{"type":"text","value":"Lead"},{"type":"image","value":{"asset":"https://static.politico.com/dims4/default/3ec0f57/2147483647/resize/1160x>/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fbc%2Ff1%2F19ee7fef4114951ffca351b7e3f4%2F190701-hickenlooper-gty-773.jpg"}},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"graphic-name-2"},{"type":"graphic","value":"graphic-name"},{"type":"text","value":"Refer"}],"docUrl":"https://docs.google.com/document/d/1lP72BvQoqymZjrzNfjT1j24Ml3CjjuMnN2ubgso-rkU/edit"}
     }
   }
 }

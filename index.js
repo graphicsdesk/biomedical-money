@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Bundler = require('parcel-bundler');
+require('dotenv').config();
 
 const LOCALS_FILLER_STR = 'BODY_LOCALS';
 const PH_CONFIG = `{
@@ -22,7 +23,10 @@ const PH_CONFIG = `{
 
   // Every time bundler starts, update doc content
   bundler.on('buildStart', () => {
-    const doc = JSON.parse(fs.readFileSync('./data/doc.json', 'utf8'));
+    const doc = {
+      ...JSON.parse(fs.readFileSync('./data/doc.json', 'utf8')),
+      docUrl: process.env.DOC_URL,
+    };
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
 
     // Generate new posthtml config from doc.json; update the old one if necessary
