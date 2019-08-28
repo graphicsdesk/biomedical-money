@@ -2,9 +2,7 @@
   "plugins": {
     "posthtml-expressions": {
       "root": "./src",
-      "locals": {
-        "body": [{"type":"text","value":"Leadin"},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"asset-name"},{"type":"text","value":"Conclusion"}]
-      }
+      "locals": {"headline":"The Headline","byline":"By Jason Kao","body":[{"type":"text","value":"Leadin"},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"asset-name"},{"type":"text","value":"Conclusion"}]}
     }
   }
 }

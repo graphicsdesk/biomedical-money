@@ -2,15 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const Bundler = require('parcel-bundler');
 
-const BODY_FILLER_STR = 'BODY_LOCALS'
-
+const LOCALS_FILLER_STR = 'BODY_LOCALS';
 const PH_CONFIG = `{
   "plugins": {
     "posthtml-expressions": {
       "root": "./src",
-      "locals": {
-        "body": ${BODY_FILLER_STR}
-      }
+      "locals": ${LOCALS_FILLER_STR}
     }
   }
 }`;
@@ -24,7 +21,7 @@ const PH_CONFIG = `{
 
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
     // Generate new posthtml config from doc.json
-    const phConfig = PH_CONFIG.replace(BODY_FILLER_STR, JSON.stringify(doc.body));
+    const phConfig = PH_CONFIG.replace(LOCALS_FILLER_STR, JSON.stringify(doc));
 
     // If config changed, rewrite file
     if (phConfig !== oldConfig)

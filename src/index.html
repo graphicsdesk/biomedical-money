@@ -1,11 +1,18 @@
 <html>
 
+<head>
+  <title>{{ headline }}</title>
+</head>
+
 <body>
+  <h1>{{ headline }}</h1>
+  <h3>{{ byline }}</h3>
+
   <each loop="item in body">
-    <p>{{ item.type }} — {{ item.value }}</p>
+    <p>{{ item.value }} (type: {{ item.type }})</p>
   </each>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
