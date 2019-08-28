@@ -16,17 +16,17 @@ const PH_CONFIG = `{
 }`;
 
 (async function() {
+
   // Initialize bundler
   const bundler = new Bundler(path.join(__dirname, './src/index.html'));
 
+  // Every time bundler starts, update doc content
   bundler.on('buildStart', () => {
     const doc = JSON.parse(fs.readFileSync('./data/doc.json', 'utf8'));
-
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
-    // Generate new posthtml config from doc.json
-    const phConfig = PH_CONFIG.replace(new RegExp(LOCALS_FILLER_STR, 'g'), JSON.stringify(doc));
 
-    // If config changed, rewrite file
+    // Generate new posthtml config from doc.json; update the old one if necessary
+    const phConfig = PH_CONFIG.replace(new RegExp(LOCALS_FILLER_STR, 'g'), JSON.stringify(doc));
     if (phConfig !== oldConfig)
       fs.writeFileSync('.posthtmlrc', phConfig);
   });
