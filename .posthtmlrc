@@ -1,8 +1,11 @@
 {
   "plugins": {
+    "posthtml-include": {
+      "root": "./src"
+    },
     "posthtml-expressions": {
-      "root": "./src",
-      "locals": {"headline":"The Headline","byline":"By Jason Kao","body":[{"type":"text","value":"Leadin"},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"asset-name"},{"type":"text","value":"Conclusion"}]}
+      "root": "./src/partials",
+      "locals": {"headline":"My Headline","byline":"By Jason Kao","body":[{"type":"text","value":"Lead"},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"graphic-name"},{"type":"text","value":"Refer"}]}
     }
   }
 }

@@ -20,8 +20,10 @@
   "devDependencies": {
     "@newswire/doc-to-archieml": "^1.0.0",
     "googleapis": "^42.0.0",
+    "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
-    "posthtml-expressions": "^1.1.1"
+    "posthtml-expressions": "^1.1.1",
+    "posthtml-include": "^1.2.0"
   },
   "dependencies": {},
   "description": ""

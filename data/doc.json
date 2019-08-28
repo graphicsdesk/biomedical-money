@@ -1,10 +1,10 @@
 {
-  "headline": "The Headline",
+  "headline": "My Headline",
   "byline": "By Jason Kao",
   "body": [
     {
       "type": "text",
-      "value": "Leadin"
+      "value": "Lead"
     },
     {
       "type": "text",
@@ -12,11 +12,11 @@
     },
     {
       "type": "graphic",
-      "value": "asset-name"
+      "value": "graphic-name"
     },
     {
       "type": "text",
-      "value": "Conclusion"
+      "value": "Refer"
     }
   ]
 }

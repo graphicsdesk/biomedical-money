@@ -2,17 +2,37 @@
 
 <head>
   <title>{{ headline }}</title>
+  <link rel="stylesheet" href="./styles.scss">
 </head>
 
 <body>
-  <h1>{{ headline }}</h1>
-  <h3>{{ byline }}</h3>
 
-  <each loop="item in body">
-    <p>{{ item.value }} (type: {{ item.type }})</p>
-  </each>
+  <header>
+    <h1 class="headline">{{ headline }}</h1>
+    <p class="byline">{{ byline }}</p>
+  </header>
 
-  <script src="script.js"></script>
+  <div class="story">
+    <each loop="item in body">
+      <switch expression="item.type">
+        <case n="'text'">
+          <include src="partials/paragraph.html"></include>
+        </case>
+        <case n="'graphic'">
+          <div class="graphic">
+            <if condition="item.value === 'graphic-name'">
+              <include src="graphic-name.html"></include>
+            </if>
+            <elseif condition="item.value === 'graphic-name-2'">
+              <include src="graphic-name-2.html"></include>
+            </elseif>
+          </div>
+        </case>
+      </switch>
+    </each>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
