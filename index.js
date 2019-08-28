@@ -26,7 +26,7 @@ const PH_CONFIG = `{
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
 
     // Generate new posthtml config from doc.json; update the old one if necessary
-    const phConfig = PH_CONFIG.replace(new RegExp(LOCALS_FILLER_STR, 'g'), JSON.stringify(doc));
+    const phConfig = PH_CONFIG.replace(LOCALS_FILLER_STR, JSON.stringify(doc));
     if (phConfig !== oldConfig)
       fs.writeFileSync('.posthtmlrc', phConfig);
   });
