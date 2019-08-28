@@ -1,0 +1,27 @@
+{
+  "name": "spectate-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spec-journalism/spectate-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spec-journalism/spectate-example/issues"
+  },
+  "homepage": "https://github.com/spec-journalism/spectate-example#readme",
+  "devDependencies": {
+    "@newswire/doc-to-archieml": "^1.0.0",
+    "googleapis": "^42.0.0",
+    "parcel-bundler": "^1.12.3",
+    "posthtml-expressions": "^1.1.1"
+  },
+  "dependencies": {},
+  "description": ""
+}

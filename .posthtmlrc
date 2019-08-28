@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "posthtml-expressions": {
+      "root": "./src",
+      "locals": {
+        "body": [{"type":"text","value":"Leadin"},{"type":"text","value":"Another sentence"},{"type":"graphic","value":"asset-name"},{"type":"text","value":"Conclusion"}]
+      }
+    }
+  }
+}
