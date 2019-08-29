@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "googleapis": "^42.0.0",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
+    "patch-package": "^6.1.2",
     "posthtml-expressions": "^1.1.1",
     "posthtml-include": "^1.2.0"
   },

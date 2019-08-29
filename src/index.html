@@ -7,10 +7,9 @@
 
 <body>
 
-  <header>
-    <h1 class="headline">{{ headline }}</h1>
-    <p class="byline">{{ byline }}</p>
-  </header>
+  <include src="partials/navbar.html"></include>
+
+  <include src="partials/header.html"></include>
 
   <div class="story">
     <each loop="item in body">
