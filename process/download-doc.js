@@ -1,15 +1,16 @@
 const fs = require('fs');
 const fsPromise = fs.promises;
 const readline = require('readline');
+const YAML = require('YAML');
 const { google } = require('googleapis');
 const { docToArchieML } = require('@newswire/doc-to-archieml');
-require('dotenv').config();
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/documents.readonly'];
 const TOKEN_PATH = 'token.json';
 
-const documentId = process.env.DOC_URL.match(/[-\w]{25,}/)[0];
+const config = YAML.parse(fs.readFileSync(process.cwd() + '/config.yml'));
+const documentId = config.DOC_URL.match(/[-\w]{25,}/)[0];
 
 // Load client secrets from a local file.
 fs.readFile(__dirname + '/credentials.json', (err, content) => {

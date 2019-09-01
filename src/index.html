@@ -7,16 +7,14 @@
 
 <body>
 
-  <include src="partials/navbar.html"></include>
+  <include src="partials/navbar.html"></include>  
 
-  <include src="partials/header.html"></include>
-  
-  <div class="g-body credits">
-    <each loop="item in credits.split('\n')">
-      <p>{{ item }}</p>
-    </each>
-    <p class="date">{{ date }}</p>
-  </div>
+  <if condition="USE_COVER_HED">    
+    <include src="partials/header-cover.html"></include>
+  </if>
+  <else>
+    <include src="partials/header.html"></include>
+  </else>
 
 
   <div class="story">
@@ -30,9 +28,6 @@
             <if condition="item.value === 'graphic-name'">
               <include src="graphic-name.html"></include>
             </if>
-            <elseif condition="item.value === 'graphic-name-2'">
-              <include src="graphic-name-2.html"></include>
-            </elseif>
           </div>
         </case>
         <case n="'image'">
@@ -43,7 +38,7 @@
   </div>
 
   <div class="spectate-footer">
-    <a href="{{ docUrl }}" target="_blank">Doc</a>
+    <a href="{{ DOC_URL }}" target="_blank">Doc</a>
   </div>
 
   <script src="./script.js"></script>

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const YAML = require('YAML');
 const Bundler = require('parcel-bundler');
-require('dotenv').config();
 
 const LOCALS_FILLER_STR = 'BODY_LOCALS';
 const PH_CONFIG = `{
@@ -16,6 +16,13 @@ const PH_CONFIG = `{
   }
 }`;
 
+const processData = data => {
+  const SPACING = '    ';
+  const { byline, credits } = data;
+  data.bylineAndCredits = byline + SPACING + credits.split('\n').join(SPACING);
+  return data;
+};
+
 (async function() {
 
   // Initialize bundler
@@ -23,10 +30,13 @@ const PH_CONFIG = `{
 
   // Every time bundler starts, update doc content
   bundler.on('buildStart', () => {
-    const doc = {
+    const { DOC_URL, USE_COVER_HED } = YAML.parse(fs.readFileSync(process.cwd() + '/config.yml').toString());
+
+    const doc = processData({
       ...JSON.parse(fs.readFileSync('./data/doc.json', 'utf8')),
-      docUrl: process.env.DOC_URL,
-    };
+      DOC_URL,
+      USE_COVER_HED,
+    });
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
 
     // Generate new posthtml config from doc.json; update the old one if necessary
