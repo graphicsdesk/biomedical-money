@@ -29,7 +29,8 @@
     "posthtml-include": "^1.2.0"
   },
   "dependencies": {
-    "enter-view": "^2.0.0"
+    "enter-view": "^2.0.0",
+    "text-balancer": "^1.0.5"
   },
   "description": ""
 }
