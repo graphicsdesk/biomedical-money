@@ -1,8 +1,31 @@
 <div id="navbar">
-  <img class="eye-logo" src="../assets/img/eye-logo.png" />
+  <a href="https://www.columbiaspectator.com/eye">
+    <img class="eye-logo" src="../assets/img/eye-logo-black.png" />
+  </a>
   <div class="refs">
-    <each loop="item in ['Leads', 'Features', 'View From Here', 'The Ear', 'Eyesights']">
-      <p>{{ item }}</p>
+    <each loop="item in [
+      {
+        name: 'Leads',
+        link: 'http://columbiaspectator.com/eye/lead',
+      },
+      {
+        name: 'Features',
+        link: 'http://columbiaspectator.com/eye/features',
+      },
+      {
+        name: 'View From Here',
+        link: 'http://columbiaspectator.com/eye/view-from-here',
+      },
+      {
+        name: 'The Ear',
+        link: 'http://columbiaspectator.com/eye/the-ear',
+      },
+      {
+        name: 'Eyesights',
+        link: 'http://columbiaspectator.com/eye/eyesights',
+      },
+    ]">
+      <a href="{{ item.link }}">{{ item.name }}</a>
     </each>
   </div>
 </div>
