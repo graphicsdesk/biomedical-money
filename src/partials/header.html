@@ -1,12 +1,9 @@
-<header>
-  <h1 class="headline">{{ headline }}</h1>
-  <p class="deck">{{ deck }}</p>
-  <p class="byline">{{ byline }}</p>
-</header>
+<div class="cover">
+  <img src="{{ top.cover }}">
 
-<div class="g-body credits">
-  <each loop="item in credits.split('\n')">
-    <p>{{ item }}</p>
-  </each>
-  <p class="date">{{ date }}</p>
+  <header>
+    <h1 class="headline">{{ headline }}</h1>
+    <p class="deck">{{ deck }}</p>
+    <p class="byline">{{ byline }}</p>
+  </header>
 </div>

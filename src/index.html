@@ -10,6 +10,14 @@
   <include src="partials/navbar.html"></include>
 
   <include src="partials/header.html"></include>
+  
+  <div class="g-body credits">
+    <each loop="item in credits.split('\n')">
+      <p>{{ item }}</p>
+    </each>
+    <p class="date">{{ date }}</p>
+  </div>
+
 
   <div class="story">
     <each loop="item in body">

@@ -1,9 +1,12 @@
 {
-  "headline": "Under the Veil",
-  "deck": "The Silence Surrounding Sexual Harassment in Labs At Columbia",
+  "headline": "A Story Told Twice",
+  "deck": "18 Years Ago, Graduate Students Tried to Unionize",
   "byline": "By Julian Shen-Berro",
-  "date": "September 20, 2018",
-  "credits": "Edited by Candy Chan\nGraphics by Jason Kao\nPhoto illustration by Brenda Huang",
+  "date": "September 27, 2018",
+  "credits": "Edited by Juliana Kim\nGraphics by Jason Kao\nPhoto illustration by Brenda Huang",
+  "top": {
+    "cover": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/5TWE753MK5GVZMEP7KH5IC7GSE.jpg"
+  },
   "body": [
     {
       "type": "text",
