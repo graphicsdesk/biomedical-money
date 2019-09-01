@@ -29,11 +29,11 @@ header {
   padding: 36px 0;
   background-color: rgba(0, 0, 0, 0.7);
   transform: translateY(-150%); // TODO: do better;
+  color: #fff;
 
   p {
     margin: 0;
     text-align: center;
-    color: #fff;
   }
 
   .headline {
@@ -44,7 +44,6 @@ header {
     margin-bottom: 20px;
     line-height: 0.72;
     text-align: center;
-    color: #fff;
   }
 
   .deck {
@@ -101,7 +100,7 @@ header {
 .eye-logo {
   width: 96px;
   height: 100px;
-  margin-right: 48px;
+  margin-right: 44px;
 }
 
 .refs {
