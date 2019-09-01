@@ -1,8 +1,8 @@
 diff --git a/node_modules/@newswire/doc-to-archieml/index.js b/node_modules/@newswire/doc-to-archieml/index.js
-index ca5c4d2..a5d8251 100644
+index ca5c4d2..33a08fc 100644
 --- a/node_modules/@newswire/doc-to-archieml/index.js
 +++ b/node_modules/@newswire/doc-to-archieml/index.js
-@@ -13,6 +13,10 @@ function readParagraphElement(element) {
+@@ -13,8 +13,13 @@ function readParagraphElement(element) {
  
      // step through optional text styles to check for an associated URL
      if (!textRun.textStyle) return content;
@@ -12,4 +12,7 @@ index ca5c4d2..a5d8251 100644
 +
      if (!textRun.textStyle.link) return content;
      if (!textRun.textStyle.link.url) return content;
++    if (textRun.textStyle.link.url.includes('.jpg')) return content;
  
+     // if we got this far there's a URL key, grab it...
+     const url = textRun.textStyle.link.url;
