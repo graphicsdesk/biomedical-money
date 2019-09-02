@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fsPromise = fs.promises;
 const readline = require('readline');
-const YAML = require('YAML');
+const YAML = require('yaml');
 const { google } = require('googleapis');
 const { docToArchieML } = require('@newswire/doc-to-archieml');
 

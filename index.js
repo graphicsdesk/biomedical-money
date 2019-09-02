@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const YAML = require('YAML');
+const YAML = require('yaml');
 const Bundler = require('parcel-bundler');
 
 const LOCALS_FILLER_STR = 'BODY_LOCALS';
