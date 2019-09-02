@@ -1,6 +1,7 @@
 @import 'fonts';
 
 $navbar-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.27);
+$navbar-height: 48px;
 
 body {
   margin: 0;
@@ -102,13 +103,19 @@ header {
 #navbar {
   display: flex;
   width: 100%;
-  height: 48px;
+  height: $navbar-height;
   position: fixed;
   background-color: #ffffff;
   z-index: 100;
-  opacity: 0;
   transition-duration: .2s;
   box-shadow: $navbar-shadow;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  z-index: 1;
 }
 
 .eye-logo {
@@ -116,11 +123,41 @@ header {
   height: 100px;
 }
 
-.refs {
+.hamburger-btn {
+  align-self: center;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+  width: 18px;
+  padding: 0;
+  margin-right: 20px;
+  display: none;
+}
+
+#navbar:not(.show-nav-links) {
+  .hamburger, .hamburger-btn:after, .hamburger-btn:before {
+    background-color: #111;
+    height: 2px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .hamburger-btn:after {
+    content: "";
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .hamburger-btn:before {
+    content: "";
+    display: block;
+  }
+}
+
+#nav-links {
   flex-grow: 1;  
   display: flex;
   align-items: center;
-  height: 100%;
 
   a {
     margin: 0;
@@ -131,34 +168,20 @@ header {
     text-decoration: none;
   }
 
-  a:first-child {
-    display: none;
-  }
-
   a:hover {
     text-decoration: underline;
   }
 }
 
 @media (max-width: 660px) {
-  .eye-logo {
-    position: absolute;
-  }
-
   #navbar {
-    box-shadow: none;
-  }
-
-  #navbar:hover > .refs {
-    height: 240px;
-    opacity: 1;
-  }
-
-  .refs {
     flex-direction: column;
-    overflow-y: hidden;
-    transition-duration: .3s;
-    box-shadow: $navbar-shadow;
+  }
+
+  #nav-links {
+    visibility: hidden;
+    flex-direction: column;
+    transition-duration: .2s;
 
     a {
       width: 100%;
@@ -167,12 +190,32 @@ header {
       padding: 17px 0;
       margin-left: 0;
     }
+  }
 
-    a:first-child {
-      display: block;
-      text-align: right;
-      padding-right: 20px;
+  #navbar.show-nav-links {
+    .hamburger-btn {
+      background: url(../assets/svg/icon-close.svg) no-repeat 50% content-box;
+      background-size: 86% auto;
     }
+
+    #navbar {
+      box-shadow: none;
+    }
+
+    #nav-links {
+      visibility: visible;
+      box-shadow:
+        0 -10px white, // White shadow to mask top box-shadow
+        $navbar-shadow;
+    }
+
+    .logo-container {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  .hamburger-btn {
+    display: block;
   }
 }
 

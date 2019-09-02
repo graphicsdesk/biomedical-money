@@ -23,10 +23,15 @@ const processData = data => {
   return data;
 };
 
+const entryFiles = path.join(__dirname, './src/index.html');
+const options = {
+  global: 'script',
+};
+
 (async function() {
 
   // Initialize bundler
-  const bundler = new Bundler(path.join(__dirname, './src/index.html'));
+  const bundler = new Bundler(entryFiles, options);
 
   // Every time bundler starts, update doc content
   bundler.on('buildStart', () => {

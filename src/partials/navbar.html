@@ -1,9 +1,13 @@
 <div id="navbar">
-  <a href="https://www.columbiaspectator.com/eye">
-    <img class="eye-logo" src="../assets/img/eye-logo-black.png" />
-  </a>
-  <div class="refs">
-    <a>X</a>
+  <div class="logo-container">
+    <a href="https://www.columbiaspectator.com/eye">
+      <img class="eye-logo" src="../assets/img/eye-logo-black.png" />
+    </a>
+    <button onclick="script.hamburgerTrigger()" class="hamburger-btn">
+      <div class="hamburger"></div>
+    </a>
+  </div>
+  <div id="nav-links">
     <each loop="item in [
       {
         name: 'Leads',

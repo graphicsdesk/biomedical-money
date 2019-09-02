@@ -14,6 +14,12 @@ enterView({
   exit: () => navbar.style.opacity = 0,
 });
 
+// Mobile navbar hamburger trigger
+
+export function hamburgerTrigger() {
+  navbar.classList.toggle('show-nav-links');
+}
+
 // Text balance headline and deck
 
 textBalancer.balanceText('.headline, .deck');
