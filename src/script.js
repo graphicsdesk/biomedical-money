@@ -8,8 +8,8 @@ import config from '../config.yml';
 const navbar = document.getElementById('navbar');
 navbar.style.opacity = 0;
 enterView({
-  selector: '.headline',
-  offset: config.USE_COVER_HED ? 0.88 : 0.75,
+  selector: config.USE_COVER_HED ? '.headline' : '.step-deck',
+  offset: config.USE_COVER_HED ? 0.88 : 0.9,
   enter: () => navbar.style.opacity = 1,
   exit: () => navbar.style.opacity = 0,
 });
@@ -25,9 +25,10 @@ export function hamburgerTrigger() {
 const PLAYBACK = 200;
 const vid = document.getElementById('video-cover');
 
-function scrollPlay() {  
-  var frameNumber  = window.pageYOffset / PLAYBACK;
-  vid.currentTime  = frameNumber;
+function scrollPlay() {
+  const frameNumber = window.pageYOffset / PLAYBACK;
+  if (frameNumber !== vid.currentTime)
+    vid.currentTime = frameNumber;
   window.requestAnimationFrame(scrollPlay);
 }
 

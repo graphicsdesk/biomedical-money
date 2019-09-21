@@ -17,7 +17,7 @@ const PH_CONFIG = `{
 }`;
 
 const processData = data => {
-  const SPACING = '    ';
+  const SPACING = '     ';
   const { byline, credits } = data;
   data.bylineAndCredits = byline + SPACING + credits.split('\n').join(SPACING);
   return data;

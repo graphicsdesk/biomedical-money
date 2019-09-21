@@ -3,9 +3,14 @@
   "deck": "18 Years Ago, Graduate Students Tried to Unionize",
   "byline": "By Julian Shen-Berro",
   "date": "September 27, 2018",
-  "credits": "Edited by Juliana Kim\nGraphics by Jason Kao\nPhoto illustration by Brenda Huang",
+  "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Jason Kao\nPhoto illustration by Brenda Huang",
   "top": {
-    "cover": "https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"
+    "cover": "https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4",
+    "steps": [
+      "First step",
+      "Second step",
+      "Third step"
+    ]
   },
   "body": [
     {
