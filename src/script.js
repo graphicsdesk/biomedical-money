@@ -25,14 +25,28 @@ export function hamburgerTrigger() {
 const PLAYBACK = 200;
 const vid = document.getElementById('video-cover');
 
+let coverHeight = null;
+
 function scrollPlay() {
-  const frameNumber = window.pageYOffset / PLAYBACK;
-  if (frameNumber !== vid.currentTime)
-    vid.currentTime = frameNumber;
+  let frameNumber = window.pageYOffset;
+  if (frameNumber < coverHeight) {
+     frameNumber /= PLAYBACK;
+    if (frameNumber !== vid.currentTime) {
+      vid.currentTime = frameNumber;
+      console.log(window.pageYOffset)
+    }
+  }
   window.requestAnimationFrame(scrollPlay);
 }
 
+function updateCoverHeight() {
+  coverHeight = document.getElementById('deck-overlay').getBoundingClientRect().height;
+}
+
 window.requestAnimationFrame(scrollPlay);
+
+updateCoverHeight();
+window.addEventListener('resize', updateCoverHeight);
 
 // Text balance headline and deck
 
