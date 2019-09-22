@@ -1,7 +1,10 @@
-.PHONY: download create
+.PHONY: download deploy
 
 download:
 	node process/download-doc.js
 
-create:
-	npm init -y
+deploy:
+	cd dist
+	git add .
+	git commit -m 'Deploy to gh-pages'
+	git push origin gh-pages

@@ -31,10 +31,8 @@ function scrollPlay() {
   let frameNumber = window.pageYOffset;
   if (frameNumber < coverHeight) {
      frameNumber /= PLAYBACK;
-    if (frameNumber !== vid.currentTime) {
+    if (frameNumber !== vid.currentTime)
       vid.currentTime = frameNumber;
-      console.log(window.pageYOffset)
-    }
   }
   window.requestAnimationFrame(scrollPlay);
 }
