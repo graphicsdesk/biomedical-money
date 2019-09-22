@@ -22,7 +22,7 @@ export function hamburgerTrigger() {
 
 // Play scroll video
 
-const PLAYBACK = 200;
+const PLAYBACK = 600;
 const vid = document.getElementById('video-cover');
 
 let coverHeight = null;

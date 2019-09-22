@@ -26,6 +26,7 @@ const processData = data => {
 const entryFiles = path.join(__dirname, './src/index.html');
 const options = {
   global: 'script',
+  publicUrl: './',
 };
 
 (async function() {

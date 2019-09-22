@@ -5,7 +5,7 @@
   "date": "September 22, 2019",
   "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Jason Kao\nIllustration by Brenda Huang\nPhotography by Amelia Benjamin Milne",
   "top": {
-    "cover": "https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4",
+    "cover": "../assets/converted.mp4",
     "steps": [
       "First step",
       "Second step",
