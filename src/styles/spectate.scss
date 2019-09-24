@@ -135,9 +135,18 @@ header {
   height: $navbar-height;
   position: fixed;
   background-color: #ffffff;
-  z-index: 100;
+  z-index: 1000;
   transition-duration: .2s;
   box-shadow: $navbar-shadow;
+}
+
+#navbar.only-logo {
+  background: none;
+  box-shadow: none;
+
+  #nav-links {
+    opacity: 0;
+  }
 }
 
 .logo-container {
@@ -187,6 +196,7 @@ header {
   flex-grow: 1;  
   display: flex;
   align-items: center;
+  transition-duration: .2s;
 
   a {
     margin: 0;

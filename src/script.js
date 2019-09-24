@@ -1,17 +1,17 @@
 import enterView from 'enter-view';
 import textBalancer from 'text-balancer';
 
-import config from '../config.yml';
+import { USE_COVER_HED } from '../config.yml';
 
 // Fade in navbar at scroll trigger
 
 const navbar = document.getElementById('navbar');
-navbar.style.opacity = 0;
+navbar.classList.add('only-logo');
 enterView({
-  selector: config.USE_COVER_HED ? '.headline' : '.step-deck',
-  offset: config.USE_COVER_HED ? 0.88 : 0.9,
-  enter: () => navbar.style.opacity = 1,
-  exit: () => navbar.style.opacity = 0,
+  selector: USE_COVER_HED ? '.headline' : '.step-deck',
+  offset: USE_COVER_HED ? 0.85 : 0.9,
+  enter: () => navbar.classList.remove('only-logo'),
+  exit: () => navbar.classList.add('only-logo'),
 });
 
 // Mobile navbar hamburger trigger
@@ -22,7 +22,7 @@ export function hamburgerTrigger() {
 
 // Play scroll video
 
-const PLAYBACK = 600;
+const PLAYBACK = 400;
 const vid = document.getElementById('video-cover');
 
 let coverHeight = null;
@@ -43,8 +43,10 @@ function updateCoverHeight() {
 
 window.requestAnimationFrame(scrollPlay);
 
-updateCoverHeight();
-window.addEventListener('resize', updateCoverHeight);
+if (!USE_COVER_HED) {
+  updateCoverHeight();
+  window.addEventListener('resize', updateCoverHeight);
+}
 
 // Text balance headline and deck
 
