@@ -9,7 +9,7 @@ const navbar = document.getElementById('navbar');
 navbar.classList.add('only-logo');
 enterView({
   selector: USE_COVER_HED ? '.headline' : '.step-deck',
-  offset: USE_COVER_HED ? 0.85 : 0.9,
+  offset: USE_COVER_HED ? 0.85 : 0.92,
   enter: () => navbar.classList.remove('only-logo'),
   exit: () => navbar.classList.add('only-logo'),
 });
@@ -22,7 +22,7 @@ export function hamburgerTrigger() {
 
 // Play scroll video
 
-const PLAYBACK = 400;
+const PLAYBACK = 550;
 const vid = document.getElementById('video-cover');
 
 let coverHeight = null;

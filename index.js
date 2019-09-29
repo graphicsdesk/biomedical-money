@@ -19,14 +19,14 @@ const PH_CONFIG = `{
 const processData = data => {
   const SPACING = '     ';
   const { byline, credits } = data;
-  data.bylineAndCredits = byline + SPACING + credits.split('\n').join(SPACING);
+  data.credits = credits.split('\n').join('. ') + '.';
   return data;
 };
 
 const entryFiles = path.join(__dirname, './src/index.html');
 const options = {
   global: 'script',
-  publicUrl: './',
+  // publicUrl: './',
 };
 
 (async function() {
@@ -36,7 +36,7 @@ const options = {
 
   // Every time bundler starts, update doc content
   bundler.on('buildStart', () => {
-    const { DOC_URL, USE_COVER_HED } = YAML.parse(fs.readFileSync(process.cwd() + '/config.yml').toString());
+    const { DOC_URL, USE_COVER_HED } = YAML.parse(fs.readFileSync('./config.yml').toString());
 
     const doc = processData({
       ...JSON.parse(fs.readFileSync('./data/doc.json', 'utf8')),

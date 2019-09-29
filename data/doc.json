@@ -1,11 +1,11 @@
 {
   "headline": "A Story Told Twice",
-  "deck": "18 Years Ago, Graduate Students Tried to Unionize",
+  "deck": "18 Years Ago, Graduate Students Tried To Unionize",
   "byline": "By Arminda Downey",
-  "date": "September 22, 2019",
-  "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Jason Kao\nIllustration by Brenda Huang\nPhotography by Amelia Benjamin Milne",
+  "date": "September 29, 2019",
+  "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Raeedah Wahid\nIllustration by Brenda Huang\nPhotography by Beetee Milne\nProduced by Jason Kao",
   "top": {
-    "cover": "../assets/converted.mp4",
+    "cover": "../assets/video-cover.mp4",
     "steps": [
       "First step",
       "Second step",

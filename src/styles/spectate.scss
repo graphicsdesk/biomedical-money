@@ -42,8 +42,6 @@ h1, p {
 }
 
 .deck-overlay {
-  margin-bottom: 28px;
-
   .cover {
     position: sticky;
     top: 0;
@@ -68,6 +66,10 @@ header {
 
   p {
     margin: 0;
+    font-family: $graphik;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;   
   }
 
   .headline {
@@ -77,10 +79,12 @@ header {
     font-weight: bold;
     margin-bottom: 14px;
     text-align: center;
+    font-weight: 700;
+    font-family: Playfair Display;
   }
 
   .deck {
-    font-family: Graphik;
+    font-family: $graphik;
     font-size: 20px;
     line-height: 1.45;
     margin-bottom: 14px;
@@ -88,23 +92,35 @@ header {
   }
 
   .byline {
-    font-weight: 700;
-    font-family: Graphik;
-    font-size: 16px;
-    line-height: 1.6;
     font-weight: 600;
-    white-space: pre-wrap;
   }
+
+  .pub-date {
+    // margin-bottom: 12px;
+  }
+}
+
+.step-deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -35vh;
 }
 
 .video-step {
   padding-bottom: 90vh;
-  font-family: Georgia, serif;
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1.63;
-  text-align: center;
   margin-bottom: 0;
+
+  p {
+    background-color: white;
+    padding: 0 7px 7px;
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.63;
+    text-align: center;
+    box-decoration-break: clone;
+  }
 }
 
 .g-body {
@@ -119,7 +135,7 @@ header {
   margin-bottom: 30px;
 
   p {
-    font-family: Graphik;
+    font-family: $graphik;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
@@ -208,7 +224,7 @@ header {
   a {
     margin: 0;
     margin-left: 42px;
-    font-family: Graphik;
+    font-family: $graphik;
     font-size: 14px;
     color: #121212;
     text-decoration: none;
@@ -266,7 +282,7 @@ header {
 
 .paragraph {
   margin-bottom: 20px;
-  font-family: Georgia, serif;
+  font-family: $georgia;
   font-size: 19px;
   line-height: 1.63;
 }
@@ -287,13 +303,38 @@ header {
   margin-right: auto;
 }
 
-.spectate-footer {
+.spectate-dev-footer {
   position: fixed;
   bottom: 20px;
   left: 20px;
   opacity: 0;
 }
 
-.spectate-footer:hover {
+.spectate-dev-footer:hover {
   opacity: 1;
+}
+
+.footer {
+  margin-bottom: 60px;
+
+  p {
+    font-family: $graphik;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.3;
+    font-size: 15px;
+  }  
+
+  .article-credits {
+    letter-spacing: 0.6px;
+  }  
+
+  .article-credits::before {
+    display: block;
+    content: ' ';
+    width: 100px;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 29px;
+    margin-bottom: 30px;
+  }
 }

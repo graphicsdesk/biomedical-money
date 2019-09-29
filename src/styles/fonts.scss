@@ -1,3 +1,6 @@
+$georgia: Georgia, serif;
+$graphik: Graphik, arial, helvetica, sans-serif;
+
 @font-face {
   font-family: Georgia;
   src: url('../assets/fonts/Georgia.ttf') format('truetype');
@@ -39,4 +42,10 @@
   font-family: Playfair Display;
   src: url('../assets/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: Playfair Display;
+  src: url('../assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
 }
