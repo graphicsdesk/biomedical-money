@@ -3,7 +3,7 @@
   "deck": "18 Years Ago, Graduate Students Tried To Unionize",
   "byline": "By Arminda Downey",
   "date": "September 29, 2019",
-  "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Raeedah Wahid\nIllustration by Brenda Huang\nPhotography by Beetee Milne\nProduced by Jason Kao",
+  "credits": "Edited by Gavrielle Jacobovitz\nGraphics by Raeedah Wahid\nPhotography by Beetee Milne\nIllustration by Brenda Huang",
   "top": {
     "cover": "../assets/video-cover.mp4",
     "steps": [
@@ -36,6 +36,14 @@
     {
       "type": "text",
       "value": "For many undergraduates walking to and from class, familiar faces may dot the hundreds who make up the picket lines—these are the graduate students who teach their discussion sections and Core classes, as well as the secretaries and support staff who march today in solidarity."
+    },
+    {
+      "type": "image",
+      "value": {
+        "width": "full-bleed",
+        "asset": "https://www.newyorker.com/projects/interactive/2018/180101-silk-road/assets/photo/180108_r31249.jpg",
+        "caption": "I am a full bleed image."
+      }
     },
     {
       "type": "text",

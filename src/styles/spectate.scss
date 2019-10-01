@@ -11,6 +11,7 @@ body {
 
 h1, p {
   -webkit-font-smoothing: antialiased;
+  color: #121212;
 }
 
 b {
@@ -100,7 +101,12 @@ header {
   }
 
   .pub-date {
-    // margin-bottom: 12px;
+    margin-bottom: 4px;
+  }
+
+  .inline-credits {
+    font-weight: 600;
+    white-space: pre-wrap;
   }
 }
 
@@ -293,12 +299,21 @@ header {
 
 .image {
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
 
   img {
     width: 100%;
+    margin-bottom: 7px;
   }
+
+  p {
+    font-size: 15px;
+    font-family: $georgia;
+    color: #777;
+  }
+}
+.image.full-bleed {
+  max-width: 100vw;
 }
 
 .graphic {

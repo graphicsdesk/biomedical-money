@@ -20,6 +20,7 @@ const processData = data => {
   const SPACING = '     ';
   const { byline, credits } = data;
   data.credits = credits.split('\n').join('. ') + '.';
+  data.inlineCredits = credits.split('\n').join(SPACING);
   return data;
 };
 
