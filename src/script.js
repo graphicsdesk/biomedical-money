@@ -6,12 +6,19 @@ import { USE_COVER_HED } from '../config.yml';
 // Fade in navbar at scroll trigger
 
 const navbar = document.getElementById('navbar');
-navbar.classList.add('only-logo');
 enterView({
   selector: USE_COVER_HED ? '.headline' : '.step-deck',
-  offset: USE_COVER_HED ? 0.85 : 0.92,
+  offset: USE_COVER_HED ? 0.85 : 0.957,
   enter: () => navbar.classList.remove('only-logo'),
   exit: () => navbar.classList.add('only-logo'),
+});
+
+enterView({
+  selector: '#overlay',
+  offset: 0.98,
+  enter: () => document.getElementById('overlay').style.opacity = 1,
+  exit: () => document.getElementById('overlay').style.opacity = 0,
+  // once: true,
 });
 
 // Mobile navbar hamburger trigger
@@ -50,4 +57,4 @@ if (!USE_COVER_HED) {
 
 // Text balance headline and deck
 
-textBalancer.balanceText('.headline, .deck');
+textBalancer.balanceText('.headline, .deck, .image-overlay .image-caption');

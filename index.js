@@ -16,18 +16,10 @@ const PH_CONFIG = `{
   }
 }`;
 
-const processData = data => {
-  const SPACING = '     ';
-  const { byline, credits } = data;
-  data.credits = credits.split('\n').join('. ') + '.';
-  data.inlineCredits = credits.split('\n').join(SPACING);
-  return data;
-};
-
 const entryFiles = path.join(__dirname, './src/index.html');
 const options = {
   global: 'script',
-  // publicUrl: './',
+  publicUrl: process.env.NODE_ENV === 'production' ? './' : '/'
 };
 
 (async function() {
@@ -39,15 +31,17 @@ const options = {
   bundler.on('buildStart', () => {
     const { DOC_URL, USE_COVER_HED } = YAML.parse(fs.readFileSync('./config.yml').toString());
 
-    const doc = processData({
-      ...JSON.parse(fs.readFileSync('./data/doc.json', 'utf8')),
-      DOC_URL,
-      USE_COVER_HED,
-    });
     const oldConfig = fs.readFileSync('.posthtmlrc').toString();
 
     // Generate new posthtml config from doc.json; update the old one if necessary
-    const phConfig = PH_CONFIG.replace(LOCALS_FILLER_STR, JSON.stringify(doc));
+    const phConfig = PH_CONFIG.replace(
+      LOCALS_FILLER_STR,
+      JSON.stringify({
+        ...JSON.parse(fs.readFileSync('./data/doc.json', 'utf8')),
+        DOC_URL,
+        USE_COVER_HED,
+      })
+    );
     if (phConfig !== oldConfig)
       fs.writeFileSync('.posthtmlrc', phConfig);
   });
