@@ -29,17 +29,23 @@ export function hamburgerTrigger() {
 
 // Play scroll video
 
-const PLAYBACK = 550;
-const vid = document.getElementById('video-cover');
+const deckOverlay = document.getElementById('step-deck');
+const deckSteps = document.getElementsByClassName('video-step');
+const deckStep = deckSteps[ deckSteps.length - 1 ];
+const video = document.getElementById('video-cover');
+
+let playbackRate = 500; // set a default
+video.addEventListener('loadedmetadata', () => playbackRate = (deckOverlay.getBoundingClientRect().height - deckStep.getBoundingClientRect().height / 2) / video.duration);
 
 let coverHeight = null;
 
 function scrollPlay() {
+  console.log(playbackRate)
   let frameNumber = window.pageYOffset;
   if (frameNumber < coverHeight) {
-     frameNumber /= PLAYBACK;
-    if (frameNumber !== vid.currentTime)
-      vid.currentTime = frameNumber;
+     frameNumber /= playbackRate;
+    if (frameNumber !== video.currentTime)
+      video.currentTime = frameNumber;
   }
   window.requestAnimationFrame(scrollPlay);
 }

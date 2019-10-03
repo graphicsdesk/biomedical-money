@@ -19,7 +19,6 @@ const PH_CONFIG = `{
 const entryFiles = path.join(__dirname, './src/index.html');
 const options = {
   global: 'script',
-  publicUrl: process.env.NODE_ENV === 'production' ? './' : '/'
 };
 
 (async function() {
