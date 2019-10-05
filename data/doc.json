@@ -3,8 +3,8 @@
   "deck": "The state of biomedical research funding at Columbia",
   "date": "September 29, 2019",
   "byline": "By Arminda Downey-Mavromatis",
-  "credits": "Edited by Gavrielle Jacobovitz\nPhotography by Cherrie Zheng and Auden Barbour\nGraphics by Raeedah Wahid",
-  "footer": "Produced by Jason Kao and Brenda Huang.",
+  "credits": "Edited by Gavrielle Jacobovitz\nPhotography by Cherrie Zheng and Auden Barbour\nGraphics by Raeedah Wahid\nAnimation by Brenda Huang",
+  "footer": "Produced by Jason Kao.",
   "top": {
     "cover": "../assets/video-cover.mp4",
     "caption": "Animation by Brenda Huang.",

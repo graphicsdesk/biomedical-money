@@ -72,6 +72,12 @@ b {
   object-fit: cover;
 }
 
+@media (max-width: 600px) {
+  #video-cover {
+    object-fit: contain;
+  }
+}
+
 .cover-caption {
   font-size: 15px;
   font-family: $georgia;
@@ -198,6 +204,7 @@ header {
 
   .hamburger-btn {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -273,6 +280,7 @@ header {
 
   #nav-links {
     visibility: hidden;
+    opacity: 0;
     flex-direction: column;
 
     a {
@@ -296,6 +304,7 @@ header {
 
     #nav-links {
       visibility: visible;
+      opacity: 1;
       box-shadow:
         0 -10px white, // White shadow to mask top box-shadow
         $navbar-shadow;
