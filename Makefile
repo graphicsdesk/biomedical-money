@@ -3,7 +3,7 @@
 download:
 	node process/download-doc.js
 
-build:
+deploy:
 	rm -rf dist/*
 	parcel build src/index.html --public-url ./
 	# git worktree add dist gh-pages
