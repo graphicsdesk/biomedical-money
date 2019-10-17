@@ -31,7 +31,7 @@
       "type": "image",
       "value": {
         "width": "full-width",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/g9fvUjwaO2luPuYtdM4k6YfKQgM=/arc-anglerfish-arc2-prod-spectator/public/Q6PLMQANCJAUNNOFUUKBDQPBL4.jpg",
+        "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/Q6PLMQANCJAUNNOFUUKBDQPBL4.jpg",
         "caption": "I am an image with width “full-width”. The cries travel from the gates of 116th and Broadway to the Morningside campus. It’s a Monday",
         "caption-overlay": "true",
         "credit": "Cherrie Zheng"
@@ -41,7 +41,7 @@
       "type": "image",
       "value": {
         "width": "auto",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/SbxPxnpYv5NnBToBsplTY13Euy8=/arc-anglerfish-arc2-prod-spectator/public/RKGNNKHL7RBDHEOCADFYU6BLXM.jpg",
+        "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RKGNNKHL7RBDHEOCADFYU6BLXM.jpg",
         "caption": "I am an image with width “auto”.",
         "credit": "Cherrie Zheng"
       }
@@ -50,7 +50,7 @@
       "type": "image",
       "value": {
         "width": "full-bleed",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/p4skUI33tppvbRe3Zod6IHTa9Wg=/arc-anglerfish-arc2-prod-spectator/public/QQ3M5JQPRVGOHBXRX36HEQEPJ4.jpg",
+        "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/QQ3M5JQPRVGOHBXRX36HEQEPJ4.jpg",
         "caption": "I am an image with width “full-bleed”.",
         "credit": "Cherrie Zheng"
       }
@@ -59,7 +59,7 @@
       "type": "image",
       "value": {
         "width": "auto",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/h4Bcjh0IBVHl5d3lJqbCUGaqLbI=/arc-anglerfish-arc2-prod-spectator/public/73HPVKYC2BHG5MJ4E4SFP5PNNU.jpg",
+        "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/73HPVKYC2BHG5MJ4E4SFP5PNNU.jpg",
         "caption": "I am an image with width “auto”.",
         "credit": "Cherrie Zheng"
       }
