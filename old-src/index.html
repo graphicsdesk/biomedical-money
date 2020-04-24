@@ -1,39 +1,26 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-  <title>{{ headline }}: {{ deck }}</title>
+
+  <title>{{ headline }}</title>
   <link rel="stylesheet" href="./styles.scss">
   <link rel="shortcut icon" href="https://www.columbiaspectator.com/pb/resources/img/CDS_Favicon.ico" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <include src="partials/navbar.html"></include>
+  <include src="partials/navbar.html"></include>  
 
-  <div class="story-top">
-    <each loop="item in top">
-      <switch expression="item.type">
-        <case n="'graphic'">
-          <div class="graphic">
-            <if condition="item.value.asset === 'deck-video.html'">
-              <include src="deck-video.html"></include>
-            </if>
-          </div>
-        </case>
-      </switch>
-    </each>
-  </div>
-
-  <if condition="USE_COVER_HED">
+  <if condition="USE_COVER_HED">    
     <include src="partials/header-cover.html"></include>
   </if>
   <else>
     <include src="partials/header.html"></include>
   </else>
+
 
   <div class="story">
     <each loop="item in body">
@@ -41,15 +28,15 @@
         <case n="'text'">
           <include src="partials/paragraph.html"></include>
         </case>
-        <case n="'subhed'">
-          <include src="partials/subhed.html"></include>
+        <case n="'graphic'">
+          <div class="graphic">
+            <if condition="item.value === 'graphic-name'">
+              <include src="graphic-name.html"></include>
+            </if>
+          </div>
         </case>
         <case n="'image'">
           <include src="partials/image.html"></include>
-        </case>
-        <case n="'graphic'">
-          <div class="graphic">
-          </div>
         </case>
       </switch>
     </each>
@@ -62,7 +49,6 @@
   <include src="partials/footer.html"></include>
 
   <script src="./script.js"></script>
-
 </body>
 
 </html>

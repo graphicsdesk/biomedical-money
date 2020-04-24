@@ -1,0 +1,33 @@
+<div class="deck-overlay" id="deck-overlay">
+  <div class="cover">
+    <video id="video-cover">
+      <source src="{{ top.cover }}"></source>
+    </video>
+  </div>
+
+  <!-- TODO: mimic this positioning
+    https://www.nytimes.com/interactive/2019/09/14/world/europe/notre-dame-fire-lead.html
+  -->
+
+  <div class="step-deck" id="step-deck" style="letter-spacing: 0.5px">
+    <each loop="step in top.steps">
+      <div class="video-step">
+        <p>{{ step }}</p>
+      </div>
+    </each>
+  </div>
+</div>
+
+<!-- <p class="cover-caption">{{ top.caption }}</p> -->
+
+<header class="g-body">
+  <h1 class="headline">{{ headline }}</h1>
+  <p class="deck">{{ deck }}</p>
+  <p class="byline">{{ byline }}</p>
+  <p class="pub-date">{{ date }}</p>
+  <p class="inline-credits">
+    <each loop="item in credits.split('\n')">
+      <span>{{ item }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </each>
+  </p>
+</header>

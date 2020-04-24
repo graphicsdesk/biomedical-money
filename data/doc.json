@@ -5,15 +5,21 @@
   "byline": "By Arminda Downey-Mavromatis",
   "credits": "Edited by Gavrielle Jacobovitz\nPhotography by Cherrie Zheng and Auden Barbour\nGraphics by Raeedah Wahid\nAnimation by Brenda Huang",
   "footer": "Produced by Jason Kao.",
-  "top": {
-    "cover": "../assets/video-cover.mp4",
-    "caption": "Animation by Brenda Huang.",
-    "steps": [
-      "First step",
-      "Second step",
-      "Third step"
-    ]
-  },
+  "top": [
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "deck-video.html",
+        "cover": "../assets/video-cover.mp4",
+        "caption": "Animation by Brenda Huang.",
+        "steps": [
+          "First step",
+          "Second step",
+          "Third step"
+        ]
+      }
+    }
+  ],
   "body": [
     {
       "type": "text",
@@ -32,7 +38,7 @@
       "value": {
         "width": "full-width",
         "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/Q6PLMQANCJAUNNOFUUKBDQPBL4.jpg",
-        "caption": "I am an image with width “full-width”. The cries travel from the gates of 116th and Broadway to the Morningside campus. It’s a Monday",
+        "caption": "I am an image. The cries travel from the gates of 116th and Broadway to the Morningside campus. It’s a Monday",
         "caption-overlay": "true",
         "credit": "Cherrie Zheng"
       }
@@ -42,7 +48,7 @@
       "value": {
         "width": "auto",
         "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RKGNNKHL7RBDHEOCADFYU6BLXM.jpg",
-        "caption": "I am an image with width “auto”.",
+        "caption": "I am an image.",
         "credit": "Cherrie Zheng"
       }
     },
@@ -51,7 +57,7 @@
       "value": {
         "width": "full-bleed",
         "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/QQ3M5JQPRVGOHBXRX36HEQEPJ4.jpg",
-        "caption": "I am an image with width “full-bleed”.",
+        "caption": "I am an image.",
         "credit": "Cherrie Zheng"
       }
     },
@@ -60,35 +66,8 @@
       "value": {
         "width": "auto",
         "asset": "https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/73HPVKYC2BHG5MJ4E4SFP5PNNU.jpg",
-        "caption": "I am an image with width “auto”.",
+        "caption": "I am an image.",
         "credit": "Cherrie Zheng"
-      }
-    },
-    {
-      "type": "image",
-      "value": {
-        "width": "auto",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/vnqi1SM-H7Z95fJIGUK1ld_AXBw=/arc-anglerfish-arc2-prod-spectator/public/7SUFVGTHAZED7FDQOM4OVIUUSI.jpg",
-        "caption": "I am an image with width “auto”.",
-        "credit": "Cherrie Zheng"
-      }
-    },
-    {
-      "type": "image",
-      "value": {
-        "width": "full-width",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/nwGvmxJWqUC0HMZAWiRQLG1dtMU=/arc-anglerfish-arc2-prod-spectator/public/7GALIVPXFJGRZHBZIAP3OGRBT4.jpg",
-        "caption": "I am an image with width “full-width”.",
-        "credit": "Auden Barbour"
-      }
-    },
-    {
-      "type": "image",
-      "value": {
-        "width": "full-width",
-        "asset": "https://spectator.arcpublishing.com/photo/resize/pqXBtm5fvALg7JEdXJu86MP5ZtY=/arc-anglerfish-arc2-prod-spectator/public/TIS2BLEVDZDIBIYQMXB7VIFGN4.jpg",
-        "caption": "I am an image with width “full-width”.",
-        "credit": "Auden Barbour"
       }
     }
   ]

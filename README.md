@@ -1,3 +1,3 @@
-This story was built with [Spectate](https://github.com/spec-journalism/spectate).
+# SLUG
 
-[Live demo](https://spec-journalism.github.io/biomedical-money/).
+This story was created with [Spectate](https://github.com/graphicsdesk/spectate). For setup and usage instructions, see the [Spectate documentation](https://github.com/graphicsdesk/spectate/#cloning-a-spectate-project).
